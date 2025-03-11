@@ -1,0 +1,305 @@
+/* Global Styles */
+body {
+  background-color: black; /* Black background for all pages */
+  color: white; /* White text for better contrast */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: black !important; /* Black navbar */
+  border-bottom: 1px solid #28a745; /* Green border at the bottom */
+}
+
+.navbar-brand,
+.nav-link {
+  color: white !important; /* White text for navbar links */
+}
+
+.nav-link:hover {
+  color: #28a745 !important; /* Green text on hover */
+}
+
+/* Banner Section */
+.bannerBgImage {
+  background-color: black; /* Black background */
+  padding: 50px 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Hide overflow to prevent scrollbars during animation */
+}
+
+.bannerText {
+  text-align: left;
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 20px; /* Add padding for better spacing */
+}
+
+.bannerTitle {
+  font-size: 3rem; /* Adjusted font size for better readability */
+  color: white;
+  margin-bottom: 10px; /* Add spacing between lines */
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-100%); /* Start off-screen to the left */
+  animation: slideInLeft 1s ease-out forwards; /* Slide-in animation */
+}
+
+.bannerTitle2 {
+  font-size: 3rem; /* Adjusted font size for better readability */
+  color: #28a745; /* Green color for the name */
+  margin-bottom: 10px; /* Add spacing between lines */
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-100%); /* Start off-screen to the left */
+  animation: slideInLeft 1s ease-out 0.5s forwards; /* Slide-in animation with delay */
+}
+
+.bannerBgImage1 {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 40px;
+  box-shadow: 0 8px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Initially hidden */
+  transform: translateX(100%); /* Start off-screen to the right */
+  animation: slideInRight 1s ease-out 1s forwards; /* Slide-in animation with delay */
+}
+
+/* Slide-in Animation for Text (Left) */
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move to original position */
+  }
+}
+
+/* Slide-in Animation for Photo (Right) */
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move to original position */
+  }
+}
+
+/* Responsive Design for Home Page */
+@media (max-width: 768px) {
+  .bannerBgImage {
+    height: auto; /* Allow the section to grow based on content */
+    padding: 20px 0; /* Reduce padding for smaller screens */
+  }
+
+  .bannerText {
+    text-align: center; /* Center text on mobile */
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .bannerTitle,
+  .bannerTitle2 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  .bannerBgImage1 {
+    width: 80%; /* Adjust image size for smaller screens */
+    margin-top: 20px; /* Add space above the image */
+  }
+}
+
+@media (max-width: 480px) {
+  .bannerTitle,
+  .bannerTitle2 {
+    font-size: 1.8rem; /* Even smaller font size for very small screens */
+  }
+
+  .bannerBgImage1 {
+    width: 90%; /* Adjust image size for very small screens */
+  }
+}
+
+/* About Me Section */
+.about-section {
+  padding: 80px 0;
+  background-color: black; /* Black background */
+  color: white; /* White text */
+  overflow: hidden; /* Hide overflow to prevent scrollbars during animation */
+}
+
+.about-heading {
+  font-size: 3rem;
+  color: #28a745; /* Green color for the heading */
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-bottom: 30px;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-100%); /* Start off-screen to the left */
+  animation: slideInLeft 1s ease-out forwards; /* Slide-in animation */
+}
+
+.about-content .lead {
+  font-size: 1.5rem;
+  color: white; /* White text for the content */
+  max-width: 800px;
+  margin: 0 auto; /* Center the content */
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-100%); /* Start off-screen to the left */
+  animation: slideInLeft 1s ease-out 0.5s forwards; /* Slide-in animation with delay */
+}
+
+/* Education Details */
+.education-details {
+  margin-top: 50px;
+}
+
+.education-details h2 {
+  font-size: 2.5rem;
+  color: #28a745; /* Green color for the heading */
+  margin-bottom: 30px;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-100%); /* Start off-screen to the left */
+  animation: slideInLeft 1s ease-out 1s forwards; /* Slide-in animation with delay */
+}
+
+.education-card {
+  background-color: #333; /* Dark gray background for cards */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+  margin-bottom: 20px;
+  text-align: center; /* Center align text */
+  opacity: 0; /* Initially hidden */
+}
+
+.education-card.slide-in-left {
+  transform: translateX(-100%); /* Start off-screen to the left */
+  animation: slideInLeft 1s ease-out 1.5s forwards; /* Slide-in animation with delay */
+}
+
+.education-card.slide-in-right {
+  transform: translateX(100%); /* Start off-screen to the right */
+  animation: slideInRight 1s ease-out 1.5s forwards; /* Slide-in animation with delay */
+}
+
+.education-card:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.education-card .icon {
+  margin-bottom: 15px;
+  color: #28a745; /* Green color for icons */
+}
+
+.education-card h3 {
+  font-size: 1.8rem;
+  color: #28a745; /* Green color for headings */
+  margin-bottom: 10px;
+}
+
+.education-card p {
+  font-size: 1.2rem;
+  color: white; /* White text for details */
+  margin: 5px 0;
+}
+
+/* Slide-in Animation for Left */
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move to original position */
+  }
+}
+
+/* Slide-in Animation for Right */
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move to original position */
+  }
+}
+
+/* Responsive Design for About Me Page */
+@media (max-width: 768px) {
+  .about-heading {
+    font-size: 2.5rem; /* Smaller font size for mobile */
+  }
+
+  .about-content .lead {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+  }
+
+  .education-details h2 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  .education-card h3 {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+  }
+
+  .education-card p {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
+}
+/* Projects Page Styles */
+.textpro {
+  text-align: left;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #28a745; /* Green color for headings */
+}
+
+/* Technologies Page Styles */
+.texttec {
+  text-align: left;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #28a745; /* Green color for headings */
+}
+.lead {
+  font-size: 2rem;
+  color: #28a745;
+}
+.text-success {
+  font-size: 3rem;
+}
+.mt-4 {
+  font-size: 3rem;
+}
+
+/* Slide-in Animation for Left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide-in Animation for Right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply Slide-in Animations */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideInRight 1s ease-out forwards;
+}
