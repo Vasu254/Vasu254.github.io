@@ -303,3 +303,21 @@ body {
   transform: translateX(100%);
   animation: slideInRight 1s ease-out forwards;
 }
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+.contact-details {
+  padding-top: 10px; /* Adjust if needed */
+}
+@media (max-width: 768px) {
+  .bannerBgImage1 img {
+    margin-top: 50px; /* Adjust this value as needed */
+  }
+}
