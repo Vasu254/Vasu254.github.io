@@ -9,19 +9,34 @@ body {
 
 /* Navbar Styles */
 .navbar {
-  background-color: black !important; /* Black navbar */
-  border-bottom: 1px solid #28a745; /* Green border at the bottom */
+  background: linear-gradient(90deg, #070707 0%, #181818 100%) !important;
+  border-bottom: 1px solid #222;
+  box-shadow: 0 2px 16px rgba(13, 110, 253, 0.08);
+  padding: 0.5rem 0;
 }
-
-.navbar-brand,
+.navbar-brand {
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px #0d6efd33;
+  transition: color 0.2s;
+}
 .nav-link {
-  color: white !important; /* White text for navbar links */
+  color: #e0e7ef !important;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0 0.5rem;
+  border-radius: 20px;
+  padding: 0.3rem 1rem !important;
+  transition: background 0.2s, color 0.2s;
 }
-
+.nav-link.active,
 .nav-link:hover {
-  color: #28a745 !important; /* Green text on hover */
+  background: #101011;
+  color: #fff !important;
+  box-shadow: 0 2px 8px #0d6efd33;
 }
-
 /* Banner Section */
 .bannerBgImage {
   background-color: black; /* Black background */
@@ -51,7 +66,7 @@ body {
 
 .bannerTitle2 {
   font-size: 3rem; /* Adjusted font size for better readability */
-  color: #28a745; /* Green color for the name */
+  color: #0d6efd; /* Blue color for the name */
   margin-bottom: 10px; /* Add spacing between lines */
   opacity: 0; /* Initially hidden */
   transform: translateX(-100%); /* Start off-screen to the left */
@@ -131,7 +146,7 @@ body {
 
 .about-heading {
   font-size: 3rem;
-  color: #28a745; /* Green color for the heading */
+  color: #0d6efd; /* Blue color for the heading */
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   margin-bottom: 30px;
   opacity: 0; /* Initially hidden */
@@ -156,7 +171,7 @@ body {
 
 .education-details h2 {
   font-size: 2.5rem;
-  color: #28a745; /* Green color for the heading */
+  color: #0d6efd; /* Blue color for the heading */
   margin-bottom: 30px;
   opacity: 0; /* Initially hidden */
   transform: translateX(-100%); /* Start off-screen to the left */
@@ -190,12 +205,12 @@ body {
 
 .education-card .icon {
   margin-bottom: 15px;
-  color: #28a745; /* Green color for icons */
+  color: #0d6efd; /* Blue color for icons */
 }
 
 .education-card h3 {
   font-size: 1.8rem;
-  color: #28a745; /* Green color for headings */
+  color: #0d6efd; /* Blue color for headings */
   margin-bottom: 10px;
 }
 
@@ -247,21 +262,22 @@ body {
 .textpro {
   text-align: left;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  color: #28a745; /* Green color for headings */
+  color: #0d6efd; /* Blue color for headings */
 }
 
 /* Technologies Page Styles */
 .texttec {
   text-align: left;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  color: #28a745; /* Green color for headings */
+  color: #0d6efd; /* Blue color for headings */
 }
 .lead {
-  font-size: 2rem;
-  color: #28a745;
+  font-size: 1.2rem;
+  color: #b0b0b0;
 }
 .text-success {
-  font-size: 3rem;
+  color: #0d6efd !important;
+  font-size: 1.1rem;
 }
 .mt-4 {
   font-size: 3rem;
@@ -304,14 +320,17 @@ body {
   animation: slideInRight 1s ease-out forwards;
 }
 footer {
-  background-color: #333;
-  color: white;
+  background: linear-gradient(90deg, #181818 60%, #0d6efd 100%);
+  color: #e0e7ef;
   text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
+  padding: 24px 0 12px 0;
+  font-size: 1rem;
+  border-top: 1px solid #0d6efd44;
+  margin-top: 40px;
+  position: static;
   width: 100%;
-  font-size: 14px;
+  letter-spacing: 1px;
+  box-shadow: 0 -2px 16px #0d6efd22;
 }
 .contact-details {
   padding-top: 10px; /* Adjust if needed */
