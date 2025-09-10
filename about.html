@@ -4,27 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Me - Vasu Kumar</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <!-- Font Awesome for icons -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/additional-styles.css" />
   </head>
-  <body style="background: #111; color: #f5f5f5">
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="loader"></div>
+    </div>
+    
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+    
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Vasu Kumar</a>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/vasukumar.png" alt="Logo" class="d-inline-block align-text-top rounded-circle" style="width: 40px; height: 40px;">
+          Vasu Kumar
+        </a>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -52,52 +71,259 @@
 
     <!-- About Me Section -->
     <section class="about-section">
-      <section class="contact-details mt-5"></section>
       <div class="container">
         <!-- About Me Heading -->
-        <h1 class="about-heading text-center slide-in-left">About Me</h1>
+        <h1 class="about-heading text-center" data-aos="fade-up">About Me</h1>
 
-        <!-- About Me Content -->
-        <div class="about-content">
-          <p class="lead text-center slide-in-left">
-            I'm a 3rd-year B.Tech student at Sandip University, Nashik, studying
-            Computer Science CSE-AIML. I'm passionate about competitive
-            programming and skilled in solving problems. Additionally, I enjoy
-            web development using the MERN stack, where I create dynamic and
-            user-friendly applications.
-          </p>
-        </div>
-
-        <!-- Education Details -->
-        <div class="education-details">
-          <h2 class="text-center mt-5 slide-in-left">Education</h2>
-          <div class="row mt-4">
-            <div class="col-md-6 mx-auto">
-              <div class="education-card slide-in-left">
-                <div class="icon">
-                  <i class="fas fa-graduation-cap fa-3x"></i>
-                  <!-- Icon for Bachelor's degree -->
+        <!-- Profile Section -->
+        <div class="row align-items-center my-5">
+          <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+            <img src="images/vasukumar.png" alt="Vasu Kumar" class="img-fluid rounded-3 shadow-lg" style="max-height: 550px; width: 70%; object-fit: cover;">
+          </div>
+          
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="about-content ps-lg-4">
+              <h2 class="mb-3">Hi, I'm Vasu Kumar Telugu</h2>
+              <p class="lead mb-4">
+                I'm a Final year B.Tech student at Sandip University, Nashik, studying
+                Computer Science CSE-AIML. I'm passionate about competitive
+                programming and skilled in solving problems. Additionally, I enjoy
+                web development using the MERN stack, where I create dynamic and
+                user-friendly applications.
+              </p>
+              
+              <div class="row mb-4">
+                <div class="col-md-6 mb-3">
+                  <div class="d-flex align-items-center">
+                    <div class="icon-box me-3">
+                      <i class="fas fa-code text-primary"></i>
+                    </div>
+                    <div>
+                      <h5 class="mb-1">Competitive Programming</h5>
+                      <p class="mb-0">Solving complex algorithmic challenges</p>
+                    </div>
+                  </div>
                 </div>
-                <h3>Bachelor of Technology</h3>
-                <p>
-                  Computer Science & Engineering with specialization in AIML
-                </p>
-                <p>Sandip University, Nashik</p>
+                
+                <div class="col-md-6 mb-3">
+                  <div class="d-flex align-items-center">
+                    <div class="icon-box me-3">
+                      <i class="fas fa-laptop-code text-primary"></i>
+                    </div>
+                    <div>
+                      <h5 class="mb-1">Web Development</h5>
+                      <p class="mb-0">Creating responsive web applications</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                  <div class="d-flex align-items-center">
+                    <div class="icon-box me-3">
+                      <i class="fas fa-robot text-primary"></i>
+                    </div>
+                    <div>
+                      <h5 class="mb-1">AI & Machine Learning</h5>
+                      <p class="mb-0">Exploring intelligent systems</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                  <div class="d-flex align-items-center">
+                    <div class="icon-box me-3">
+                      <i class="fas fa-database text-primary"></i>
+                    </div>
+                    <div>
+                      <h5 class="mb-1">Backend Development</h5>
+                      <p class="mb-0">Building robust server systems</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6 mx-auto">
-              <div class="education-card slide-in-right">
-                <div class="icon">
-                  <i class="fas fa-school fa-3x"></i>
-                  <!-- Icon for Intermediate -->
-                </div>
-                <h3>Intermediate</h3>
-                <p>MJPAPJC Jr. College (ATP)</p>
-                <p>Bangalore</p>
+              
+              <div class="d-flex flex-wrap gap-3">
+                <a href="contact.html" class="btn btn-banner">Contact Me</a>
+                <a href="resumes/vasukumar2.pdf" download="Vasu_Kumar_Resume.pdf" class="btn btn-banner btn-outline">Download CV</a>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Education Timeline -->
+        <div class="education-details my-5 pt-5" data-aos="fade-up">
+          <h2 class="text-center mb-5">My Education Journey</h2>
+          
+          <div class="timeline">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item left animate-on-scroll">
+              <div class="timeline-content">
+                <div class="timeline-date">2022 - Present</div>
+                <h3>Bachelor of Technology</h3>
+                <h4>Computer Science & Engineering with AI/ML</h4>
+                <p>Sandip University, Nashik</p>
+                <p><i class="fas fa-star text-warning"></i> CGPA: 8.34/10.0</p>
+                <div class="tech-stack">
+                  <span class="tech">Data Structures</span>
+                  <span class="tech">Algorithms</span>
+                  <span class="tech">Machine Learning</span>
+                  <span class="tech">Web Development</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item right animate-on-scroll">
+              <div class="timeline-content">
+                <div class="timeline-date">2020 - 2022</div>
+                <h3>Intermediate Education</h3>
+                <h4>Science Stream</h4>
+                <p>MJPAPJC Jr. College (ATP), Bangalore</p>
+                <p><i class="fas fa-star text-warning"></i> Percentage: 76%</p>
+                <div class="tech-stack">
+                  <span class="tech">Mathematics</span>
+                  <span class="tech">Physics</span>
+                  <span class="tech">Computer Science</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item left animate-on-scroll">
+              <div class="timeline-content">
+                <div class="timeline-date">2010 - 2020</div>
+                <h3>High School</h3>
+                <p>Kakathiya High School</p>
+                <p><i class="fas fa-star text-warning"></i> Percentage: 77%</p>
+                <div class="tech-stack">
+                  <span class="tech">Mathematics</span>
+                  <span class="tech">Science</span>
+                  <span class="tech">Computer Basics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+ <!-- Achievements Section -->
+<section class="achievements my-5 py-5">
+  <h2 class="text-center mb-5 text-white" data-aos="fade-up">Achievements & Certifications</h2>
+  <!-- Achievement Card 1 -->
+  <div class="row">
+    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="card animate-on-scroll h-100 bg-dark shadow-lg">
+        <div class="card-body text-center text-white">
+          <div class="achievement-icon mb-3">
+            <img src="images/leetcode.jpg" alt="LeetCode" class="img-fluid rounded-circle shadow" style="height: 70px;">
+          </div>
+          <h4 class="card-title">LeetCode</h4>
+          <p class="card-text">Solved <b>150+ problems</b> on LeetCode to strengthen Data Structures & Algorithms skills.</p>
+          <div class="mt-3">
+            <a href="https://leetcode.com/u/vasu254/" target="_blank" class="btn btn-primary">View Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- Achievement Card 2 -->
+    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+      <div class="card animate-on-scroll h-100 bg-dark shadow-lg">
+        <div class="card-body text-center text-white">
+          <div class="achievement-icon mb-3">
+            <img src="images/gfg.jpg" alt="GeeksforGeeks" class="img-fluid rounded-circle shadow" style="height: 70px;">
+          </div>
+          <h4 class="card-title">GeeksforGeeks</h4>
+          <p class="card-text">Solved <b>150+ problems</b> on GeeksforGeeks to enhance problem-solving ability.</p>
+          <div class="mt-3">
+            <a href="https://www.geeksforgeeks.org/user/vasu254/" target="_blank" class="btn btn-primary">View Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Achievement Card 3 -->
+    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card animate-on-scroll h-100 bg-dark shadow-lg">
+        <div class="card-body text-center text-white">
+          <div class="achievement-icon mb-3">
+            <img src="images/codechef.jpg" alt="CodeChef" class="img-fluid rounded-circle shadow" style="height: 70px;">
+          </div>
+          <h4 class="card-title">CodeChef 1★</h4>
+          <p class="card-text">Achieved a 1-star rating on CodeChef with consistent competitive programming practice.</p>
+          <p class="card-text">Solved <b>150+ problems</b> on CodeChef.</p>
+          <div class="mt-3">
+            <a href="https://www.codechef.com/users/vasu254" target="_blank" class="btn btn-primary">View Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    
+    <!-- Contact CTA Section -->
+    <section class="py-5 bg-dark">
+      <div class="container text-center" data-aos="fade-up">
+        <h2 class="mb-4">Let's Work Together!</h2>
+        <p class="lead mb-4">I'm currently available for internships and project collaborations.</p>
+        <a href="contact.html" class="btn btn-banner">Get In Touch</a>
+      </div>
+    </section>
+    
+    <!-- Footer Section -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="footer-logo">Vasu Kumar</div>
+            <p>Competitive Programmer | Web Developer | Tech Enthusiast</p>
+          </div>
+          
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h4>Quick Links</h4>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Me</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="technologies.html">Technologies</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-md-4">
+            <h4>Connect With Me</h4>
+            <div class="footer-social">
+              <a href="https://github.com/Vasu254" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/vasukumartelugu/" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <hr class="mt-4 mb-4" style="border-color: rgba(255, 255, 255, 0.1);">
+        
+        <p class="text-center">© 2025 Vasu Kumar | All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+      // Initialize AOS animation library
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+      });
+    </script>
+  </body>
+</html>
       </div>
     </section>
     <footer>
