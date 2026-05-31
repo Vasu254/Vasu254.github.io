@@ -1,59 +1,44 @@
-<header>
+# Vasu Kumar Telugu Portfolio
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
+Responsive personal portfolio for Java full-stack, Spring Boot, React.js, SQL, and AI/ML project work.
 
-# GitHub Pages
+## Project Structure
 
-_Create a site or blog from your GitHub repositories with GitHub Pages._
+```text
+.
+├── index.html              # Main landing page
+├── about.html              # Profile, education, and certifications
+├── projects.html           # Detailed project portfolio
+├── technologies.html       # Skills, tools, coursework, and soft skills
+├── contact.html            # Contact links and email form
+├── css/
+│   ├── style.css           # Main responsive UI system
+│   └── additional-styles.css
+├── js/
+│   └── main.js             # Navigation, typing text, reveal animation, back-to-top
+├── images/                 # Profile and project assets
+└── resumes/
+    └── vasukumar2.pdf      # Downloadable resume
+```
 
-</header>
+## Highlights
 
-<!--
-  <<< Author notes: Step 2 >>>
-  Start this step by acknowledging the previous step.
-  Define terms and link to docs.github.com.
-  Historic note: previous version checked for empty pull request, changed to the correct theme `minima`.
--->
+- Mobile and laptop responsive layout.
+- Professional dark portfolio UI with accessible contrast.
+- Project cards for Student ERP Management Portal, QByte Remote System Monitoring, Freshness Detection System, and earlier GitHub projects.
+- Structured skills section covering Java, Spring Boot, React.js, SQL, tools, coursework, and soft skills.
+- Certification section and contact page with resume download.
 
-## Step 2: Configure your site
+## Run Locally
 
-_You turned on GitHub Pages! :tada:_
+Open `index.html` directly in a browser, or run a local static server:
 
-We'll work in a branch, `my-pages`, that I created for you to get this site looking great. :sparkle:
+```bash
+python -m http.server 5500
+```
 
-Jekyll uses a file titled `_config.yml` to store settings for your site, your theme, and reusable content like your site title and GitHub handle. You can check out the `_config.yml` file on the **Code** tab of your repository.
+Then visit:
 
-We need to use a blog-ready theme. For this activity, we will use a theme named "minima".
-
-### :keyboard: Activity: Configure your site
-
-1. Browse to the `_config.yml` file in the `my-pages` branch.
-1. In the upper right corner, open the file editor.
-1. Add a `theme:` set to **minima** so it shows in the `_config.yml` file as below:
-   ```yml
-   theme: minima
-   ```
-1. (optional) You can modify the other configuration variables such as `title:`, `author:`, and `description:` to further customize your site.
-1. Commit your changes.
-1. (optional) Create a pull request to view all the changes you'll make throughout this course. Click the **Pull Requests** tab, click **New pull request**, set `base: main` and `compare:my-pages`.
-1. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
-
-<footer>
-
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
-
----
-
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
-
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
-</footer>
+```text
+http://localhost:5500
+```

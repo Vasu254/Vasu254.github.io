@@ -1,109 +1,102 @@
-// Main JavaScript file for interactive elements
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.querySelector(".site-nav");
+  const backToTop = document.querySelector(".back-to-top");
+  const year = document.querySelector("[data-year]");
+  const typing = document.querySelector(".typing-text");
+  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
-// Wait for the DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-    // Navbar scroll effect
-    const navbar = document.querySelector('.navbar');
-    
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            navbar.classList.add('navbar-scrolled');
-        } else {
-            navbar.classList.remove('navbar-scrolled');
-        }
-    });
-    
-    // Add active class to current page link
-    const currentLocation = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    
-    navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentLocation.split('/').pop()) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');
-        }
-    });
-    
-    // Typing animation for banner text
-    const typingElement = document.querySelector('.typing-text');
-    if (typingElement) {
-        const roles = ["Competitive Programmer", "Web Developer", "Tech Enthusiast"];
-        let roleIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        let typingDelay = 150;
-        let erasingDelay = 100;
-        let newTextDelay = 2000;
-        
-        function typeEffect() {
-            const currentRole = roles[roleIndex];
-            
-            if (isDeleting) {
-                typingElement.textContent = currentRole.substring(0, charIndex - 1);
-                charIndex--;
-                typingDelay = erasingDelay;
-            } else {
-                typingElement.textContent = currentRole.substring(0, charIndex + 1);
-                charIndex++;
-                typingDelay = 150;
-            }
-            
-            if (!isDeleting && charIndex === currentRole.length) {
-                typingDelay = newTextDelay;
-                isDeleting = true;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                roleIndex = (roleIndex + 1) % roles.length;
-            }
-            
-            setTimeout(typeEffect, typingDelay);
-        }
-        
-        setTimeout(typeEffect, 1000);
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
+
+  navLinks.forEach((link) => {
+    const href = link.getAttribute("href") || "";
+    const targetPage = href.split("#")[0] || "index.html";
+
+    if (targetPage === currentPage) {
+      link.classList.add("active");
     }
-    
-    // Animate elements when they come into view
-    const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.animate-on-scroll');
-        
-        elements.forEach(element => {
-            const elementPosition = element.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.3;
-            
-            if (elementPosition < screenPosition) {
-                element.classList.add('animated');
-            }
-        });
+
+    link.addEventListener("click", () => {
+      const menu = document.querySelector(".navbar-collapse.show");
+      if (menu && window.bootstrap) {
+        window.bootstrap.Collapse.getOrCreateInstance(menu).hide();
+      }
+    });
+  });
+
+  const handleScroll = () => {
+    if (navbar) {
+      navbar.classList.toggle("navbar-scrolled", window.scrollY > 20);
+    }
+
+    if (backToTop) {
+      backToTop.classList.toggle("show", window.scrollY > 350);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  handleScroll();
+
+  if (backToTop) {
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  if (typing) {
+    const roles = [
+      "Java Full Stack Developer",
+      "Spring Boot Developer",
+      "React.js Developer",
+      "AI/ML Enthusiast"
+    ];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    const tick = () => {
+      const role = roles[roleIndex];
+      typing.textContent = deleting
+        ? role.slice(0, charIndex - 1)
+        : role.slice(0, charIndex + 1);
+
+      charIndex += deleting ? -1 : 1;
+
+      if (!deleting && charIndex === role.length) {
+        deleting = true;
+        setTimeout(tick, 1300);
+        return;
+      }
+
+      if (deleting && charIndex === 0) {
+        deleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+      }
+
+      setTimeout(tick, deleting ? 45 : 85);
     };
-    
-    // Run once on page load
-    animateOnScroll();
-    
-    // Run on scroll
-    window.addEventListener('scroll', animateOnScroll);
-});
 
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+    tick();
+  }
+
+  const revealItems = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
         });
-    });
-});
+      },
+      { threshold: 0.14 }
+    );
 
-// Preloader
-window.addEventListener('load', function() {
-    const preloader = document.querySelector('.preloader');
-    if (preloader) {
-        setTimeout(function() {
-            preloader.style.opacity = '0';
-            setTimeout(function() {
-                preloader.style.display = 'none';
-            }, 500);
-        }, 500);
-    }
+    revealItems.forEach((item) => observer.observe(item));
+  } else {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+  }
 });

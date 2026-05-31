@@ -3,393 +3,229 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - Vasu Kumar</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
+    <meta name="description" content="Portfolio of Vasu Kumar Telugu, Java Full Stack Developer specializing in Spring Boot, REST APIs, React.js, SQL, and AI/ML projects." />
+    <title>Vasu Kumar Telugu | Java Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/additional-styles.css" />
   </head>
   <body>
-    <!-- Preloader -->
-    <div class="preloader">
-      <div class="loader"></div>
-    </div>
-    
-    <!-- Back to Top Button -->
-    <div class="back-to-top">
-      <i class="fas fa-arrow-up"></i>
-    </div>
-    
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/vasukumar.png" alt="Logo" class="d-inline-block align-text-top rounded-circle" style="width: 40px; height: 40px;">
-          Vasu Kumar
+    <nav class="navbar navbar-expand-lg fixed-top site-nav">
+      <div class="container-narrow d-flex">
+        <a class="navbar-brand brand-lockup" href="index.html">
+          <img src="images/vasukumar.png" alt="Vasu Kumar Telugu" />
+          <span>Vasu Kumar T</span>
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="projects.html">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="technologies.html">Technologies</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="technologies.html">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Banner Section -->
-    <section class="bannerBgImage">
-      <div class="container">
-        <div class="row align-items-center">
-          <!-- Text -->
-          <div class="col-lg-6 order-lg-1 order-2 bannerText">
-            <h1 class="bannerTitle" style="--item-index: 0">Hi, 👋</h1>
-            <h1 class="bannerTitle" style="--item-index: 1">My Name is</h1>
-            <h2 class="bannerTitle2">Vasu Kumar T</h2>
-            <h1 class="bannerTitle" style="--item-index: 3">I'm a</h1>
-            <div class="typing-text"></div>
-            
-            <div class="banner-buttons">
-              <a href="projects.html" class="btn btn-banner">View Projects</a>
-              <a href="resumes/vasukumar2.pdf" download="Vasu_Kumar_Resume.pdf" class="btn btn-banner btn-outline">Download CV</a>
+    <main>
+      <section class="hero">
+        <div class="container-narrow">
+          <div class="hero-content reveal">
+            <div class="profile-row">
+              <img src="images/photo.png" alt="Vasu Kumar Telugu profile" />
+              <div>
+                <p class="eyebrow">Portfolio</p>
+                <strong>Final Year B.Tech CSE-AIML Student</strong>
+              </div>
+            </div>
+            <h1>Vasu Kumar Telugu <span>builds full-stack systems.</span></h1>
+            <p class="hero-lead">
+              Java-focused developer skilled in Spring Boot, Spring MVC, Spring Data JPA, REST APIs, React.js, SQL, and practical AI/ML applications. Currently open to internships, entry-level roles, and project collaborations.
+            </p>
+            <p class="hero-lead">I am a <span class="typing-text"></span></p>
+            <div class="action-row">
+              <a href="projects.html" class="btn-main"><i class="fa-solid fa-diagram-project"></i> View Projects</a>
+              <a href="resumes/vasukumar2.pdf" class="btn-ghost" download="Vasu_Kumar_Resume.pdf"><i class="fa-solid fa-download"></i> Download CV</a>
+              <a href="contact.html" class="btn-ghost"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
             </div>
           </div>
-
-          <!-- Photo -->
-          <div class="col-lg-6 order-lg-2 order-1 text-center">
-            <img
-              src="images/vasukumar.png"
-              alt="Vasu Kumar"
-              class="img-fluid bannerBgImage1"
-            />
-          </div>
         </div>
-      </div>
-    </section>
-    
-    <!-- Featured Projects Section -->
-    <section class="py-5" id="featured-projects">
-      <div class="container">
-        <h2 class="text-center mb-5" data-aos="fade-up">Featured Projects</h2>
-        
-        <div class="row">
-          <!-- Project 1 -->
-          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="project-card animate-on-scroll">
-              <div class="card-img">
-                <img src="images/logo2.png" alt="InspireDesk: Wallpaper Goal Reminder">
+      </section>
+
+      <section class="container-narrow">
+        <div class="metrics">
+          <div class="metric-card reveal"><strong>3+</strong><span>Major academic and full-stack projects</span></div>
+          <div class="metric-card reveal"><strong>99%</strong><span>Freshness model classification accuracy</span></div>
+          <div class="metric-card reveal"><strong>Java</strong><span>Primary programming language</span></div>
+          <div class="metric-card reveal"><strong>Full Stack</strong><span>Spring Boot, React.js, SQL</span></div>
+        </div>
+      </section>
+
+      <section class="section-pad">
+        <div class="container-narrow">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Featured Work</p>
+              <h2>Projects built around real workflows.</h2>
+            </div>
+            <a href="projects.html" class="btn-small"><i class="fa-solid fa-arrow-right"></i> All Projects</a>
+          </div>
+
+          <div class="grid-3">
+            <article class="project-card reveal">
+              <div class="project-top">
+                <i class="project-icon fa-solid fa-graduation-cap"></i>
+                <h3>Student ERP Management Portal</h3>
               </div>
-              <div class="card-content">
-                <h3 class="card-title">Personal Fianace Manager</h3>
-                <p>Developed a Personal Finance Manager application featuring secure Google OAuth integration for user
-authentication, enabling streamlined financial tracking and management.</p>
-                <div class="tech-stack">
-                  <span class="tech">MERN Stack</span>
-                  <span class="tech">Google authentication</span>
-                  <span class="tech">PassPort.js</span>
+              <div class="project-body">
+                <p>Full-stack ERP application with a Spring Boot REST API backend and a React.js frontend for academic data management.</p>
+                <div class="tag-list">
+                  <span class="tag">Spring Boot</span><span class="tag">REST APIs</span><span class="tag">React.js</span><span class="tag">MySQL</span>
                 </div>
-                <a href="https://github.com/Vasu254/Personal-Finance-manager" class="btn-project" target="_blank">
-                  <i class="fab fa-github"></i> View Project
-                </a>
+                <ul class="project-points">
+                  <li>Managed student profiles, enrollment, attendance, and marks.</li>
+                  <li>Used Controller, Service, and Repository layers with Dependency Injection.</li>
+                </ul>
               </div>
-            </div>
-          </div>
-          
-          <!-- Project 2 -->
-          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="project-card animate-on-scroll">
-              <div class="card-img">
-                <img src="images/logo1.jpg" alt="Delight Biryani">
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-top">
+                <i class="project-icon fa-solid fa-server"></i>
+                <h3>QByte Remote System Monitoring</h3>
               </div>
-              <div class="card-content">
-                <h3 class="card-title">Vasu-Foods</h3>
-                <p>Order your favorite biryani online with a seamless and user-friendly interface Implemented responsive design with seamless navigation to enhance the overall user experience across
-devices.</p>
-                <div class="tech-stack">
-                  <span class="tech">HTML</span>
-                  <span class="tech">CSS</span>
-                  <span class="tech">JavaScript</span>
-                  <span class="tech">MERN Stack</span>
+              <div class="project-body">
+                <p>Monitoring system for rental machines across remote systems using secure SSH key authentication.</p>
+                <div class="tag-list">
+                  <span class="tag">Spring Boot</span><span class="tag">Hibernate</span><span class="tag">JSP</span><span class="tag">SSH</span>
                 </div>
-                <a href="https://github.com/Vasu254/Vasu-Food" class="btn-project" target="_blank">
-                  <i class="fab fa-github"></i> View Project
-                </a>
+                <ul class="project-points">
+                  <li>Tracked CPU usage and system status from distributed machines.</li>
+                  <li>Built backend services for persistence and centralized dashboards.</li>
+                </ul>
               </div>
-            </div>
-          </div>
-          
-          <!-- Project 3 -->
-          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="project-card animate-on-scroll">
-              <div class="card-img">
-                <img src="images/logo3.png" alt="Personal Finance Manager">
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-top">
+                <i class="project-icon fa-solid fa-seedling"></i>
+                <h3>Freshness Detection System</h3>
               </div>
-              <div class="card-content">
-                <h3 class="card-title">Job Management System</h3>
-                <p>Developed a full-stack CRUD application with React (Vite) frontend, Node.js + Express backend, and
-PostgreSQL database for managing student job and salary details.</p>
-                <div class="tech-stack">
-                  <span class="tech">React</span>
-                  <span class="tech">Node.js</span>
-                  <span class="tech">MongoDB</span>
-                  <span class="tech">Express</span>
-                  <span class="tech">PostgreSQL</span>
+              <div class="project-body">
+                <p>Machine Learning system for fruit and vegetable freshness classification using MobileNetV2 and OpenCV.</p>
+                <div class="tag-list">
+                  <span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">OpenCV</span><span class="tag">React JS</span>
                 </div>
-                <a href="https://github.com/Vasu254/Job-management-System-CRUD" class="btn-project" target="_blank">
-                  <i class="fab fa-github"></i> View Project
-                </a>
+                <ul class="project-points">
+                  <li>Supported live camera, image upload, and video input processing.</li>
+                  <li>Included authentication and lightweight SQLite storage.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad pt-0">
+        <div class="container-narrow">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Capabilities</p>
+              <h2>Stack and strengths.</h2>
+            </div>
+            <a href="technologies.html" class="btn-small"><i class="fa-solid fa-code"></i> Skills Page</a>
+          </div>
+
+          <div class="grid-3">
+            <div class="skill-card reveal">
+              <h3><i class="fa-brands fa-java"></i> Backend Development</h3>
+              <p>Spring Boot, Spring Web, JPA, Hibernate, JDBC, REST API design, Maven, SQL, and layered MVC architecture.</p>
+              <div class="skill-list">
+                <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">JPA</span><span class="tag">MySQL</span>
+              </div>
+            </div>
+            <div class="skill-card reveal">
+              <h3><i class="fa-brands fa-react"></i> Frontend Development</h3>
+              <p>Responsive interfaces with HTML, CSS, JavaScript, React.js, dashboards, forms, and module-based layouts.</p>
+              <div class="skill-list">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">ReactJS</span>
+              </div>
+            </div>
+            <div class="skill-card reveal">
+              <h3><i class="fa-solid fa-brain"></i> CS and AI/ML</h3>
+              <p>Object-Oriented Programming, Data Structures and Algorithms, DBMS, Operating Systems, Networks, Postman, and Machine Learning.</p>
+              <div class="skill-list">
+                <span class="tag">DSA</span><span class="tag">DBMS</span><span class="tag">ML</span><span class="tag">Postman</span>
               </div>
             </div>
           </div>
         </div>
-        
-        <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="400">
-          <a href="https://github.com/Vasu254" class="btn btn-banner" target="_blank">
-            <i class="fab fa-github me-2"></i> View All Projects on GitHub
-          </a>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Skills Overview -->
-    <section class="py-5 bg-dark" id="skills-overview">
-      <div class="container">
-        <h2 class="text-center mb-5" data-aos="fade-up">My Skills</h2>
-        
-        <div class="row">
-         <!-- Skill Category 1 -->
-<div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-  <div class="card animate-on-scroll h-100 bg-dark"> <!-- bg-dark for contrast -->
-    <div class="card-body text-white"> <!-- text is white -->
-      <h3 class="card-title text-center">
-        <i class="fas fa-code fa-2x mb-3 text-primary"></i><br>
-        Programming
-      </h3>
-      <div class="skill-container">
-        <div class="skill-name">
-          <span>Java</span>
-          <span>90%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-percentage" style="width: 90%"></div>
-        </div>
-      </div>
-      <div class="skill-container">
-        <div class="skill-name">
-          <span>Python</span>
-          <span>85%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-percentage" style="width: 85%"></div>
-        </div>
-      </div>
-      <div class="skill-container">
-        <div class="skill-name">
-          <span>C++</span>
-          <span>70%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-percentage" style="width: 70%"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+      </section>
 
-          <!-- Skill Category 2 -->
-       <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-  <div class="card animate-on-scroll h-100 bg-dark"> <!-- bg-dark for contrast -->
-    <div class="card-body text-white"> <!-- text is white -->
-      <h3 class="card-title text-center">
-        <i class="fas fa-laptop-code fa-2x mb-3 text-primary"></i><br>
-        Web Development
-      </h3>
-      <div class="skill-container">
-        <div class="skill-name">
-          <span>HTML/CSS</span>
-          <span>95%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-percentage" style="width: 95%"></div>
-        </div>
-      </div>
-      <div class="skill-container">
-        <div class="skill-name">
-          <span>JavaScript</span>
-          <span>85%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-percentage" style="width: 85%"></div>
-        </div>
-      </div>
-      <div class="skill-container">
-        <div class="skill-name">
-          <span>React</span>
-          <span>80%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-percentage" style="width: 80%"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-          
-          <!-- Skill Category 3 -->
-<div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-  <div class="card animate-on-scroll h-100 bg-dark"> <!-- bg-dark for contrast -->
-    <div class="card-body text-white"> <!-- text-white added -->
-      <h3 class="card-title text-center">
-        <i class="fas fa-database fa-2x mb-3 text-primary"></i><br>
-        Backend & Tools
-      </h3>
-      <div class="skill-container">
-        <div class="skill-name">
-          <span>Node.js</span>
-          <span>75%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-percentage" style="width: 75%"></div>
-        </div>
-      </div>
-      <div class="skill-container">
-        <div class="skill-name">
-          <span>MongoDB</span>
-          <span>80%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-percentage" style="width: 80%"></div>
-        </div>
-      </div>
-      <div class="skill-container">
-        <div class="skill-name">
-          <span>Git</span>
-          <span>90%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-percentage" style="width: 90%"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-        
-        <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="400">
-          <a href="technologies.html" class="btn btn-banner">View All Technologies</a>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Footer Section -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 mb-4 mb-md-0">
-            <div class="footer-logo">Vasu Kumar</div>
-            <p>Competitive Programmer | Web Developer | Tech Enthusiast</p>
-          </div>
-          
-          <div class="col-md-4 mb-4 mb-md-0">
-            <h4>Quick Links</h4>
-            <ul class="list-unstyled">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Me</a></li>
-              <li><a href="projects.html">Projects</a></li>
-              <li><a href="technologies.html">Technologies</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-          
-          <div class="col-md-4">
-            <h4>Connect With Me</h4>
-            <div class="footer-social">
-              <a href="https://github.com/Vasu254" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/vasukumartelugu/" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
+      <section class="section-pad pt-0">
+        <div class="container-narrow">
+          <div class="grid-2">
+            <div class="panel reveal">
+              <p class="section-kicker">Certifications</p>
+              <h2>Learning with practical delivery.</h2>
+              <p>Java full stack training, MERN stack exposure, AI-ML internship learning, and continuous development through coursework and projects.</p>
+              <div class="action-row">
+                <a href="about.html#certifications" class="btn-main"><i class="fa-solid fa-certificate"></i> View Certifications</a>
+              </div>
+            </div>
+            <div class="panel reveal">
+              <p class="section-kicker">Contact</p>
+              <h2>Ready for opportunities.</h2>
+              <p>I am available for internships, junior developer roles, and collaborative software projects involving Java, Spring Boot, React.js, SQL, or AI/ML workflows.</p>
+              <div class="action-row">
+                <a href="mailto:vasukumartelugu@gmail.com" class="btn-main"><i class="fa-solid fa-envelope"></i> Email Me</a>
+                <a href="https://github.com/Vasu254" target="_blank" class="btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
             </div>
           </div>
         </div>
-        
-        <hr class="mt-4 mb-4" style="border-color: rgba(255, 255, 255, 0.1);">
-        
-        <p class="text-center">© 2025 Vasu Kumar | All Rights Reserved</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container-narrow">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-title">Vasu Kumar Telugu</div>
+            <p class="muted">Java Full Stack Developer | Spring Boot | React.js | AI/ML Enthusiast</p>
+          </div>
+          <div>
+            <div class="footer-title">Quick Links</div>
+            <div class="footer-links">
+              <a href="about.html">About</a>
+              <a href="projects.html">Projects</a>
+              <a href="technologies.html">Skills</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer-title">Connect</div>
+            <div class="socials">
+              <a href="https://github.com/Vasu254" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/vasukumartelugu/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="mailto:vasukumartelugu@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+        <p class="copyright">Copyright <span data-year></span> Vasu Kumar Telugu. All rights reserved.</p>
       </div>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <button class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS Animation Library -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Custom JavaScript -->
     <script src="js/main.js"></script>
-    <script>
-      // Initialize AOS animation library
-      AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true
-      });
-      
-      // Animate skill bars when in view
-      document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(function() {
-          document.querySelectorAll('.skill-percentage').forEach(function(skill) {
-            skill.style.width = skill.style.width;
-          });
-        }, 500);
-        
-        // Back to top button functionality
-        const backToTop = document.querySelector('.back-to-top');
-        window.addEventListener('scroll', function() {
-          if (window.scrollY > 300) {
-            backToTop.classList.add('show');
-          } else {
-            backToTop.classList.remove('show');
-          }
-        });
-        
-        backToTop.addEventListener('click', function() {
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          });
-        });
-      });
-    </script>
   </body>
 </html>
